@@ -108,7 +108,7 @@ async def waifu(ctx):
     await ctx.send(embed=em)
 
 
-# tapeta
+# wallpaper
 @client.command()
 async def animewallpaper(ctx):
     r = requests.get("https://nekos.life/api/v2/img/wallpaper")
