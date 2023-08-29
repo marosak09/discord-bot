@@ -65,7 +65,7 @@ async def about(ctx):
 @client.command(invoke_without_command=True)
 async def changelog(ctx):
     em = discord.Embed(title="changelog", description=f"{name} v{version}", color=discord.colour.Color.dark_magenta())
-    em.set_author(name="Sakura咲良",
+    em.set_author(name=name,
                   icon_url= emico)
     em.add_field(name="Moderation", value="`small changes in kick and ban command`")
     em.add_field(name="Bot", value="`changed .help command`")
@@ -97,59 +97,7 @@ async def meme(ctx):
     await ctx.send(embed=em)
 
 
-# waifu
-@client.command()
-async def waifu(ctx):
-    r = requests.get("https://nekos.life/api/v2/img/waifu")
-    res = r.json()
-    url = res['url']
-    em = discord.Embed(title="Waifu", color=discord.colour.Color.dark_magenta())
-    em.set_image(url=url)
-    await ctx.send(embed=em)
 
-
-# wallpaper
-@client.command()
-async def animewallpaper(ctx):
-    r = requests.get("https://nekos.life/api/v2/img/wallpaper")
-    res = r.json()
-    url = res['url']
-    em = discord.Embed(title="wallpaper", color=discord.colour.Color.dark_magenta())
-    em.set_image(url=url)
-    await ctx.send(embed=em)
-
-
-# slap
-@client.command()
-async def slap(ctx):
-    r = requests.get("https://nekos.life/api/v2/img/slap")
-    res = r.json()
-    url = res['url']
-    em = discord.Embed(title="slap", color=discord.colour.Color.dark_magenta())
-    em.set_image(url=url)
-    await ctx.send(embed=em)
-
-
-# fox girl
-@client.command()
-async def fox_girl(ctx):
-    r = requests.get("https://nekos.life/api/v2/img/fox_girl")
-    res = r.json()
-    url = res['url']
-    em = discord.Embed(title="fox girl", color=discord.colour.Color.dark_magenta())
-    em.set_image(url=url)
-    await ctx.send(embed=em)
-
-
-# animegif
-@client.command()
-async def animegif(ctx):
-    r = requests.get("https://nekos.life/api/v2/img/ngif")
-    res = r.json()
-    url = res['url']
-    em = discord.Embed(title="gif", color=discord.colour.Color.dark_magenta())
-    em.set_image(url=url)
-    await ctx.send(embed=em)
 
 
 # kick
